@@ -21,10 +21,13 @@ public class UserEntity implements Serializable {
 	private long id;
 	@Column(nullable = false, length = 50)
 	private String firstName;
+	@Column(nullable = false, length = 50)
 	private String lastName;
+	@Column(nullable = false, length = 120, unique = true) // doesn't want duplicate email
 	private String email;
-	private String password;
+	@Column(nullable = false, unique = true)
 	private String userId;
+	@Column(nullable = false, unique = true)
 	private String encryptedPassword;
 	public long getId() {
 		return id;
@@ -49,12 +52,6 @@ public class UserEntity implements Serializable {
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
 	}
 	public String getUserId() {
 		return userId;
