@@ -1,8 +1,8 @@
 # learn-spring
 ## This is a project building microservices using spring cloud and spring boot
-- EurekaService is netflix eureka server for discovery. Other services will register will eureka so eureka needs to launch first. 
+- EurekaService is netflix eureka server for discovery. Other services will register to eureka so eureka needs to launch first. 
 - APIGateway is routing layer and acts as load balancer which can route to other microservices. APIGateway needs to launch second
-- AppAppiUsers contains api for users sign up, log in. Consists of following packages:
+- AppAppiUsers contains api for users sign up, log in. 
 
 ## AppApiUsers architecture
 - Logic flow (3 tier architecture): Controller -> Service -> UsersRepository
